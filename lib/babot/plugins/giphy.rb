@@ -30,7 +30,7 @@ module Babot
           limit: 10
         }).sample(1)
         begin
-          reply(gif_data.first.fixed_width_image.url)
+          reply(gif_data.first.fixed_width_image.url.to_s)
         rescue
           reply("(okay) Cant find anything with #{search}.. Sorry!")
         end
