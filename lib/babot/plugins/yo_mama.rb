@@ -32,10 +32,15 @@ module Babot
       on(/^yomama$/) do
         get(::YoMama::BASE_URL) do |response|
           if response.code == 200
-            message.mentions.each do |mention|
-              reply "#{mention} #{::YoMama.new(response.body).joke}"
+            if message.mentions.empty?
+              reply ::YoMama.new(response.body).joke
+            else
+              message.mentions.each do |mention|
+                reply "#{mention} #{::YoMama.new(response.body).joke}"
+              end
+            end
           else
-            reply("(ohgodwhy) Yo Mama is good. So no joke for you!")
+            reply "(ohgodwhy) Yo Mama is good. So no joke for you!"
           end
         end
       end
