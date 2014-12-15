@@ -32,6 +32,10 @@ Get github stuff
 
 ###compare
 
+###clfln
+
+Show a random clfln
+
 ###whois
 
 	@bot whois dinks
