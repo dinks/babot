@@ -15,9 +15,9 @@ module Babot
         begin
           doc = Nokogiri::HTML(open(ClflnWeb::BASE_URL))
           commits = @doc.css("a.commit").map(&:content)
-          commits.sample
+          reply commits.sample
         rescue
-          "The sh*t does not seem to work."
+          reply "The sh*t does not seem to work."
         end
       end
     end
