@@ -95,7 +95,7 @@ module Babot
 
       desc 'designer excuse'
       on(/^designer_excuse$/) do
-        reply ::BabbelExcuse.new(:designer).excuse
+        reply ::BabbelExcuse.new(:designer).excuse(nil)
       end
     end
   end
