@@ -12,9 +12,13 @@ module Babot
 
       desc 'commit logs from last night'
       on(/^clfln$/) do
-        doc = Nokogiri::HTML(open(ClflnWeb::BASE_URL))
-        commits = @doc.css("a.commit").map(&:content)
-        commits.sample
+        begin
+          doc = Nokogiri::HTML(open(ClflnWeb::BASE_URL))
+          commits = @doc.css("a.commit").map(&:content)
+          commits.sample
+        rescue
+          "The sh*t does not seem to work."
+        end
       end
     end
   end
