@@ -63,7 +63,7 @@ class BabbelExcuse
     @excuser_type = excuser_type
   end
 
-  def excuse(html)
+  def excuse(html = nil)
     emoticon = LOADABLE_EMITICONS.sample(1).first
     if @excuser_type == :developer
       if html && m = DEVELOPER_REGEXP.match(html)
@@ -95,7 +95,7 @@ module Babot
 
       desc 'designer excuse'
       on(/^designer_excuse$/) do
-        reply ::BabbelExcuse.new(:designer).excuse(nil)
+        reply ::BabbelExcuse.new(:designer).excuse
       end
     end
   end
