@@ -58,6 +58,24 @@ Quotations
 
 	@bot quotes random
 
+###yomama
+
+Yo Mama jokes
+
+	@bot yomama
+
+###developer_excuse
+
+Developer excuses
+
+	@bot developer_excuse
+
+###designer_excuse
+
+Designer excuses
+
+	@bot designer_excuse
+
 ###explain
 
 	@bot explain the meaning of life
