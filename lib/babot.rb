@@ -14,7 +14,7 @@ end
 
 module Babot
   class MyBot < Hipbot::Bot
-    COMMANDS = %w( ping chuck gif github compare whois insult memes meme quotes explain google image youtube translate yomama developer_excuse )
+    COMMANDS = %w( ping chuck gif github compare whois insult memes meme quotes explain google image youtube translate yomama developer_excuse clfln )
 
     configure do |c|
       c.jid       = XMPP.jid
