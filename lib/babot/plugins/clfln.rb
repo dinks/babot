@@ -14,7 +14,7 @@ module Babot
       on(/^clfln$/) do
         begin
           doc = Nokogiri::HTML(open(ClflnWeb::BASE_URL))
-          commit = doc.css("a.commit").sample
+          commit = doc.css("a.commit").to_a.sample
           reply "#{commit.content} #{commit[:href]}"
         rescue
           reply "The sh*t does not seem to work."
